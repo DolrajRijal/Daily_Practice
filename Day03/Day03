@@ -1,31 +1,27 @@
-# There is an array of  integers. There are also  disjoint sets,  and , each containing  integers. You like all the integers in set  and dislike all the integers in set . Your initial happiness is . For each  integer in the array, if , you add  to your happiness. If , you add  to your happiness. Otherwise, your happiness does not change. Output your final happiness at the end.
+# rows = 10
+# for i in range (1,rows+1):
+#     #print spaces
+#     print(" "*(rows-i),end="")
 
-# Note: Since  and  are sets, they have no repeated elements. However, the array might contain duplicate elements.
-
-# Constraints
-
+#     #print *
+#     print("*"*(2*i-1))
 
 
-# Input Format
 
-# The first line contains integers  and  separated by a space.
-# The second line contains  integers, the elements of the array.
-# The third and fourth lines contain  integers,  and , respectively.
+    #prime check
 
-# Output Format
+def is_prime(n):
+    if n<2:
+        return False
+    for i in range (2,n):
+        if n%i == 0:
+            return False
+    return True
+n = int(input("enter the number:"))
+if is_prime(n):
+    print(f"The entered number {n} is prime")
+else:
+    print(f"the entred number is not prime")
 
-# Output a single integer, your total happiness.
 
-# Sample Input
-counth = 0
-array1 = [3,4,8,5]
-A = {3,4,6}
-B = {2,8,9}
-for i in array1:
-    if i in A:
-      counth += 1
-      print('Happines+')
-    if i in B:
-      counth -= 1
-      print('happiness-')
-print(counth)
+
