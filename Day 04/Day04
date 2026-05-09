@@ -1,0 +1,27 @@
+# rows = 10
+# for i in range (1,rows+1):
+#     #print spaces
+#     print(" "*(rows-i),end="")
+
+#     #print *
+#     print("*"*(2*i-1))
+
+
+
+    #prime check
+
+def is_prime(n):
+    if n<2:
+        return False
+    for i in range (2,n):
+        if n%i == 0:
+            return False
+    return True
+n = int(input("enter the number:"))
+if is_prime(n):
+    print(f"The entered number {n} is prime")
+else:
+    print(f"the entred number is not prime")
+
+
+
