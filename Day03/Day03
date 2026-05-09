@@ -1,15 +1,31 @@
-# input_num = int(input("Enter the integer: "))
-# if input_num % 2 == 0:
-#     print(input_num, "is even")
-# else: 
-#     print(input_num, "is odd")
+# There is an array of  integers. There are also  disjoint sets,  and , each containing  integers. You like all the integers in set  and dislike all the integers in set . Your initial happiness is . For each  integer in the array, if , you add  to your happiness. If , you add  to your happiness. Otherwise, your happiness does not change. Output your final happiness at the end.
+
+# Note: Since  and  are sets, they have no repeated elements. However, the array might contain duplicate elements.
+
+# Constraints
 
 
-#probleem 2 celsius to farenheit conversion
-num = int(input("enter the temperature in degree fahrenheit:"))
-def fahrenheit_to_celsius(x):
-    celsius = (x-32)*5/9
-    return celsius;
 
-celsius = fahrenheit_to_celsius(num)
-print(f"{num} in fahrenheit is {celsius: .2f} in celsius")
+# Input Format
+
+# The first line contains integers  and  separated by a space.
+# The second line contains  integers, the elements of the array.
+# The third and fourth lines contain  integers,  and , respectively.
+
+# Output Format
+
+# Output a single integer, your total happiness.
+
+# Sample Input
+counth = 0
+array1 = [3,4,8,5]
+A = {3,4,6}
+B = {2,8,9}
+for i in array1:
+    if i in A:
+      counth += 1
+      print('Happines+')
+    if i in B:
+      counth -= 1
+      print('happiness-')
+print(counth)
