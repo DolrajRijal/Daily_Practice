@@ -1,0 +1,3 @@
+Hello world!
+this is my first file handling exercise
+ hope it works
