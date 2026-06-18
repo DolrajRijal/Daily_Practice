@@ -5,22 +5,25 @@ def add_task():
         f.write(task + "\n")
 
 def remove_task():
-    with open("To_Do_List.txt", "r") as f:
-       tasks =  f.readlines()
-    for i, task in enumerate (tasks, start =1):
-        print(f"{i}.{task.strip()}")
-    
-    n = int(input("enter which element you want to remove"))
-    if 1 <= n <= len(tasks):
-        tasks.pop(n-1)
-        with open("To_Do_list.txt", "w") as f:
-            f.writelines(tasks)
-        print("Task removed successfully!")
+    try:
 
-    else:
-        print("Please enter valid number")
+        with open("To_Do_List.txt", "r") as f:
+            tasks =  f.readlines()
+        for i, task in enumerate (tasks, start =1):
+            print(f"{i}.{task.strip()}")
         
+        n = int(input("enter which element you want to remove"))
+        if 1 <= n <= len(tasks):
+            tasks.pop(n-1)
+            with open("To_Do_List.txt", "w") as f:
+                f.writelines(tasks)
+            print("Task removed successfully!")
 
+        else:
+            print("Please enter valid number")
+        
+    except FileNotFoundError:
+        print("NO File Found")
 def view_task():
     try:
         with open("To_Do_List.txt", 'r') as f:
