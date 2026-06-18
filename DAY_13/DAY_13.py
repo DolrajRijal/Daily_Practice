@@ -40,15 +40,6 @@ def view_task():
     
 
 
-
-
-
-
-
-
-
-
-
 print("----------------TO DO LIST--------------------")
 print("Please select the number alongside the task to perform that task")
 print("\n 1. Add task\n")
@@ -65,6 +56,7 @@ elif choice == 2:
 
 elif choice == 3:
     view_task()
+
 
 else:
     print("please input valid choice")
