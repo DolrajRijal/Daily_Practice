@@ -8,7 +8,7 @@ def comp(array1, array2):
     # checking if any of the array  
     # is a square of the other 
     if (sorted(array1) == sorted([i ** 2 for i in array2])) or (sorted(array2) == sorted([i ** 2 for i in array1])):  
-        return True
+        print("Yep! square")
       
     return False
   
