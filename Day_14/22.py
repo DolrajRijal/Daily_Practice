@@ -1,12 +1,13 @@
-class MyClass:
-    def __init__(self, num, name):
-        self.num = num
+class Student:
+    def __init__(self, name, age):
         self.name = name
+        self.age = age
 
 def main():
-    me = MyClass(1337, "Harssh")
-    print(f"{me.name} {me.num}")
+    student1 = Student("Sugam", 25)
+
+    print("Name:", student1.name)
+    print("Age:", student1.age)
 
 if __name__ == "__main__":
     main()
-    
