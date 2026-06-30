@@ -1,18 +1,17 @@
-class Dog:
-    def __init__(self, name, breed):
+class Employee:
+    def __init__(self, name, salary):
         self.name = name
-        self.breed = breed
+        self.salary = salary
 
-    def bark(self):
-        print(self.name + " says Woof!")
+    def display(self):
+        print(f"Name: {self.name}")
+        print(f"Salary: £{self.salary}")
 
-def main():
-    dog1 = Dog("Buddy", "Labrador")
+    def annual_salary(self):
+        return self.salary * 12
 
-    print("Name:", dog1.name)
-    print("Breed:", dog1.breed)
 
-    dog1.bark()
+emp1 = Employee("John", 3000)
 
-if __name__ == "__main__":
-    main()
+emp1.display()
+print("Annual Salary:", emp1.annual_salary())
