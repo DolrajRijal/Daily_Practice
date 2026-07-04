@@ -1,10 +1,12 @@
-a = 'NAINA'
-b = 'REENE'
-lst = []
+def word_counter():
+    s = input('enter the sentence')
+    li = s.split()
+    d = {}
 
-for char in a:
+    for i in li:
+        if i not in d.keys():
+            d[i] = 0
+        d[i] = d[i] + 1
+    print(d)
 
-    if char in b:
-        lst.append(char)
-
-print(lst)
+word_counter()
